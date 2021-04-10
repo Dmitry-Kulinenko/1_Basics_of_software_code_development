@@ -9,7 +9,7 @@ public class Task1 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Введите первый угл треугольника");
 		int angle1 = input.nextInt();
-		System.out.println("Введите первый угл треугольника");
+		System.out.println("Введите второй угл треугольника");
 		int angle2 = input.nextInt();
 		input.close();
 		if ((angle1 + angle2) < 180) {
