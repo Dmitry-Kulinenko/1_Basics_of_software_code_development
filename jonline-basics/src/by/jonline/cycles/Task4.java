@@ -1,14 +1,14 @@
-package by.jonline.cycles;
+/*Составить программу нахождения произведения квадратов первых двухсот чисел.*/
 
-import java.math.BigInteger;
+package by.jonline.cycles;
 
 public class Task4 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		BigInteger s = BigInteger.valueOf(1);
-		for (int i = 2; i <= 200; i++) {
-			s = s.multiply(BigInteger.valueOf((long) i * i));
+
+		long s = 1;
+		for (int i = 0; i < 200; i++) {
+			s += (Math.pow(s, 2));
 		}
 		System.out.println(s);
 

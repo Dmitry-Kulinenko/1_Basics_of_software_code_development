@@ -1,3 +1,5 @@
+/*Вычислить значения функции на отрезке [а,b] c шагом h:*/
+
 package by.jonline.cycles;
 
 import java.util.Scanner;
@@ -5,8 +7,8 @@ import java.util.Scanner;
 public class Task2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// Task2
+
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		System.out.println("Вевите начало отрезка a");
 		int a = input.nextInt();
@@ -14,7 +16,6 @@ public class Task2 {
 		int b = input.nextInt();
 		System.out.println("Вевите конец шаг h");
 		int h = input.nextInt();
-		input.close();
 
 		while (a <= b) {
 			if (a <= 2) {
@@ -24,10 +25,6 @@ public class Task2 {
 			}
 			a += h;
 		}
-	}
-
-	public Task2() {
-		// TODO Auto-generated constructor stub
 	}
 
 }

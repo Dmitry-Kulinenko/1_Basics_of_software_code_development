@@ -1,3 +1,8 @@
+/*
+ * Вывести на экран соответствий между символами и их численными обозначениями в памяти компьютера.
+ * 
+ * */
+
 package by.jonline.cycles;
 
 import java.util.Scanner;
@@ -5,23 +10,20 @@ import java.util.Scanner;
 public class Task6 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		String a;
-		char b;
-		while (true) {
-			System.out.println("Введите символ или exit для выхода");
-			a = input.next();
+		System.out.println("Введите строку");
 
-			if (a.equals("exit")) {
-				break;
-			}
-			b = a.charAt(0);
-			int c = b;
-			System.out.println("Код символа " + c);
+		a = input.next();
+
+		for (int i = 0; i < a.length(); i++) {
+
+			System.out.println("Код символа " + a.charAt(i) + " - " + +(int) a.charAt(i));
 
 		}
-		input.close();
+
 	}
 
 }

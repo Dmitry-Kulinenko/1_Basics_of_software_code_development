@@ -1,3 +1,6 @@
+/*Даны числовой ряд и некоторое число е. Найти сумму тех членов ряда, модуль которых больше или равен 
+ * заданному е. Общий член ряда имеет вид*/
+
 package by.jonline.cycles;
 
 import java.util.Scanner;
@@ -5,11 +8,12 @@ import java.util.Scanner;
 public class Task5 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter e");
+		System.out.println("Ведите e");
 		double e = input.nextDouble();
-		input.close();
+
 		int n = 1;
 		double a = 0;
 		double sum = 0;
@@ -19,7 +23,8 @@ public class Task5 {
 			a = (1 / (Math.pow(2, n))) + (1 / (Math.pow(3, n)));
 			n++;
 		} while (a >= e);
-		System.out.printf("Answer is %.3f", sum);
+
+		System.out.printf("Ответ %.3f", sum);
 
 	}
 

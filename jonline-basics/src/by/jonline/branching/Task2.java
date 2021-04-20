@@ -1,3 +1,7 @@
+/*
+ * Найти max{min(a, b), min(c, d)}
+ * */
+
 package by.jonline.branching;
 
 import java.util.Scanner;
@@ -5,8 +9,8 @@ import java.util.Scanner;
 public class Task2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// Task 2
+
+		@SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
 		System.out.println("Введите A");
 		int a = input.nextInt();
@@ -16,23 +20,25 @@ public class Task2 {
 		int c = input.nextInt();
 		System.out.println("Введите D");
 		int d = input.nextInt();
-		input.close();
-		int a1 = 0;
-		int b1 = 0;
+
+		int minAB = 0;
+		int minCD = 0;
+
 		if (a < b) {
-			a1 = a;
+			minAB = a;
 		} else {
-			a1 = b;
+			minAB = b;
 		}
 		if (c < d) {
-			b1 = c;
+			minCD = c;
 		} else {
-			b1 = d;
+			minCD = d;
 		}
-		if (a1 > b1) {
-			System.out.println("Ответ " + a1);
+
+		if (minAB > minCD) {
+			System.out.println("Ответ " + minAB);
 		} else {
-			System.out.println("Ответ " + b1);
+			System.out.println("Ответ " + minCD);
 		}
 
 	}
